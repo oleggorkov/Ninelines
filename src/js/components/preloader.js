@@ -6,4 +6,6 @@ window.onload = function () {
 			preloader.classList.add('done');
 		}
 	}, 2000);
+	let animate = document.querySelector('.resume__about');
+	animate.classList.add('animate');
 };

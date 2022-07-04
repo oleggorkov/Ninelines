@@ -14,9 +14,9 @@
 	}
 
 	&__logo {
-		display: block;
 		position: absolute;
 		left: 0;
+		display: block;
 		transition: $duration-normal;
 	}
 
@@ -29,8 +29,8 @@
 		}
 
 		.header__list {
-			width: 100%;
 			display: flex;
+			width: 100%;
 		}
 
 		.header__link {
@@ -51,6 +51,16 @@
 
 			@include active {
 				color: $color-blue;
+
+				&::before {
+					@include sprite("active");
+
+					content: "";
+					position: absolute;
+					left: -20px;
+					top: -100px;
+					z-index: -1;
+				}
 			}
 		}
 	}
@@ -61,8 +71,8 @@
 		top: 0;
 		z-index: 98;
 		display: flex;
-		align-items: center;
 		flex-direction: column;
+		align-items: center;
 		overflow: hidden;
 		overflow-y: auto;
 		margin: 0;
@@ -78,9 +88,9 @@
 		-webkit-overflow-scrolling: touch;
 
 		.header__list {
+			padding-top: 50px;
 			width: 100%;
 			text-align: center;
-			padding-top: 50px;
 		}
 
 		.header__link {
@@ -96,7 +106,7 @@
 			line-height: 31px;
 			text-align: left;
 			color: $color-main;
-			background-color: $color-back;
+			background-color: transparent;
 
 			&:not(:last-of-type) {
 				margin-bottom: 20px;
@@ -108,6 +118,16 @@
 
 			@include active {
 				color: $color-blue;
+
+				&::before {
+					@include sprite("active");
+
+					content: "";
+					position: absolute;
+					left: 13px;
+					top: -80px;
+					z-index: -1;
+				}
 			}
 		}
 
@@ -120,7 +140,6 @@
 		@include desktop {
 			display: none;
 		}
-
 	}
 
 	.sprite-clock {
@@ -133,8 +152,8 @@
 	}
 
 	&__burger {
-		display: flex;
 		z-index: 100;
+		display: flex;
 		flex-direction: column;
 		width: 26px;
 		color: $color-main;
@@ -161,12 +180,12 @@
 					transform: translate(0, 3px) rotate(-45deg);
 				}
 
-				&:nth-child(2) {
-					display: none;
-				}
-
 				&:last-child {
 					transform: translate(0, 0) rotate(45deg);
+				}
+
+				&:nth-child(2) {
+					display: none;
 				}
 			}
 		}

@@ -28,14 +28,12 @@ main.resume.container
 				| г. Кострома
 
 			.resume__social
-				button(type="button" data-social="facebook").resume__share
+				button.resume__share(type="button" data-social="facebook")
 					+svg('facebook')
-				button(type="button" data-social="vk").resume__share
+				button.resume__share(type="button" data-social="vk")
 					+svg('vk')
-				button(type="button" data-social="telegram").resume__share
+				button.resume__share(type="button" data-social="telegram")
 					+svg('telegram')
-
-
 
 	.resume__row#about
 		.resume__col
@@ -108,7 +106,6 @@ main.resume.container
 				src: `${baseDir}images/user.png`,
 				alt: 'Юзер',
 			}).resume__user
-
 
 		.resume__col
 			h2
@@ -188,7 +185,6 @@ main.resume.container
 				title: 'Languages',
 				text: 'Conversational English and Native Russian'
 			})
-
 
 	.resume__row
 		+lazyPicture({

@@ -9,7 +9,7 @@ html {
 	overflow-x: hidden;
 	min-height: 100vh;
 	box-sizing: border-box;
-	font-family: $font-family-main;;
+	font-family: $font-family-main;
 	scroll-behavior: smooth;
 
 	&.has-cursor,
@@ -138,9 +138,9 @@ iframe {
 	position: relative;
 	z-index: 1;
 	margin: 0 auto;
+	padding: 0 20px;
 	width: 100%;
 	max-width: 1180px;
-	padding: 0 20px;
 }
 
 .site {

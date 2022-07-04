@@ -10,11 +10,11 @@ $color-main: #282a33;
 $color-blue: #2f80ed;
 $color-secondary: #828282;
 
-
 // FONTS
 // stylelint-disable-next-line
 $font-family-main: "SF-Display", sans-serif;
-$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell,
+	"Open Sans", "Helvetica Neue", sans-serif;
 
 // EASING TRANSITIONS
 $duration-normal: 0.4s;

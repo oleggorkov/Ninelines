@@ -1,8 +1,8 @@
 .resume {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin-top: 130px;
-	position: relative;
 
 	@include desktop {
 		margin-top: 290px;
@@ -10,35 +10,35 @@
 
 	&__line {
 		position: absolute;
-		top: 10%;
 		left: -12px;
 		right: 0;
+		top: 10%;
 
 		@include desktop {
-			top: 135px;
 			right: auto;
+			top: 135px;
 		}
 	}
 
 	& .resume__logo {
-		width: 80px;
-		height: 80px;
 		position: absolute;
 		top: -120px;
+		width: 80px;
+		height: 80px;
 
 		@include desktop {
+			top: -190px;
 			width: 150px;
 			height: 150px;
-			top: -190px;
 		}
 	}
 
 	&__row {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		margin-bottom: 40px;
-		position: relative;
 
 		@include desktop {
 			flex-direction: row;
@@ -73,17 +73,17 @@
 	}
 
 	h2 {
+		margin-top: 0;
+		margin-bottom: 20px;
 		font-weight: 700;
 		font-size: 22px;
 		line-height: 26px;
 		color: $color-main;
-		margin-bottom: 20px;
-		margin-top: 0;
 
 		@include desktop {
+			margin-bottom: 30px;
 			font-size: 24px;
 			line-height: 29px;
-			margin-bottom: 30px;
 		}
 	}
 
@@ -98,10 +98,10 @@
 		}
 
 		&__block {
-			width: 100%;
 			display: flex;
-			justify-content: space-between;
 			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
 
 			@include desktop {
 				flex-direction: row;
@@ -142,16 +142,16 @@
 				margin-right: 0;
 			}
 
-			@media screen and (min-width: 1200px){
-				max-width: 220px;
+			@media screen and (min-width: 1200px) {
 				margin-right: 55px;
+				max-width: 220px;
 			}
 		}
 
 		&:nth-of-type(2) {
-			height: 100%;
 			position: relative;
 			margin: 40px auto;
+			height: 100%;
 
 			@include desktop {
 				margin: 0;
@@ -162,16 +162,16 @@
 				height: 200px;
 
 				@include desktop {
-					width: 500px;
-					height: 500px;
 					position: sticky;
 					top: 125px;
+					width: 500px;
+					height: 500px;
 				}
 			}
 
 			@media screen and (min-width: 1025px) {
-				right: 70px;
 				position: absolute;
+				right: 70px;
 			}
 
 			@media screen and (min-width: 1201px) {
@@ -181,10 +181,10 @@
 	}
 
 	&__education {
-		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		width: 100%;
 
 		@include desktop {
 			flex-direction: column;
@@ -193,19 +193,20 @@
 	}
 
 	h1 {
+		margin-bottom: 20px;
 		font-weight: 700;
 		font-size: 28px;
 		color: $color-main;
-		margin-bottom: 20px;
 
 		@include desktop {
+			margin-bottom: 30px;
 			font-size: 36px;
 			line-height: 140%;
-			margin-bottom: 30px;
 		}
 	}
 
 	&__info {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -220,11 +221,12 @@
 	}
 
 	&__about {
+		margin-bottom: 20px;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 140%;
 		color: $color-main;
-		margin-bottom: 20px;
+		transition: all 2s;
 
 		@include desktop {
 			margin-bottom: 0;
@@ -232,11 +234,11 @@
 	}
 
 	&__link {
+		margin-bottom: 10px;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 140%;
 		color: $color-main;
-		margin-bottom: 10px;
 
 		@include hover {
 			color: $color-blue;
@@ -245,15 +247,14 @@
 		@include active {
 			color: $color-blue;
 		}
-
 	}
 
 	&__city {
+		margin-bottom: 15px;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 140%;
 		color: $color-main;
-		margin-bottom: 15px;
 	}
 
 	&__social {
@@ -267,12 +268,30 @@
 	}
 
 	&__share {
-		padding: 0;
 		border: none;
+		padding: 0;
 		cursor: pointer;
 
 		&:not(:last-of-type) {
 			margin-right: 20px;
 		}
+	}
+}
+
+.animate {
+	animation: 3s fadeOut linear;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(40px);
+	}
+
+	to {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
 	}
 }

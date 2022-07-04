@@ -8,11 +8,11 @@
 	}
 
 	&__dates {
+		margin-bottom: 8px;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 17px;
 		color: $color-secondary;
-		margin-bottom: 8px;
 	}
 
 	&-position {
@@ -21,13 +21,12 @@
 		margin-bottom: 8px;
 
 		&__name {
+			margin-right: 8px;
 			font-weight: 700;
 			font-size: 14px;
 			line-height: 17px;
 			color: $color-main;
-			margin-right: 8px;
 		}
-
 	}
 
 	&-place {
@@ -41,11 +40,11 @@
 		}
 
 		&__name {
+			margin-right: 8px;
 			font-weight: 700;
 			font-size: 14px;
 			line-height: 17px;
 			color: $color-main;
-			margin-right: 8px;
 		}
 
 		&__about {
@@ -61,11 +60,11 @@
 	}
 
 	&__text {
+		margin-bottom: 4px;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 17px;
 		color: $color-main;
-		margin-bottom: 4px;
 	}
 
 	&-projects {
@@ -77,8 +76,8 @@
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 17px;
-			color: $color-blue;
 			text-decoration-line: underline;
+			color: $color-blue;
 
 			&:not(:first-of-type) {
 				margin-top: 3px;

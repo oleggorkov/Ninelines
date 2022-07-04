@@ -3,6 +3,7 @@ import './helpers';
 import './components/social';
 import './components/preloader';
 import './components/upButton';
+import './components/active';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';

@@ -1,20 +1,20 @@
 .up-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: fixed;
 	right: 20px;
 	bottom: 20px;
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 33px;
 	height: 33px;
-	z-index: 10000;
 	pointer-events: none;
 
 	@include desktop {
-		width: 52px;
-		height: 52px;
 		right: 25px;
 		bottom: 90px;
+		width: 52px;
+		height: 52px;
 	}
 
 	& .progress {
@@ -22,21 +22,21 @@
 	}
 
 	& .progress-ring__default {
-		display: none;
-		transform-origin: center;
-		transform: rotate(-90deg) scale(1, -1);
 		position: absolute;
 		z-index: 40000;
+		display: none;
+		transform: rotate(-90deg) scale(1, -1);
+		transform-origin: center;
 		@include desktop {
 			display: block;
 		}
 
 		&--mobile {
-			display: block;
-			transform-origin: center;
-			transform: rotate(-90deg) scale(1, -1);
 			position: absolute;
 			z-index: 40000;
+			display: block;
+			transform: rotate(-90deg) scale(1, -1);
+			transform-origin: center;
 
 			@include desktop {
 				display: none;
@@ -45,22 +45,22 @@
 	}
 
 	& .progress-ring__active {
-		display: none;
 		position: absolute;
 		z-index: 50000;
-		transform-origin: center;
+		display: none;
 		transform: rotate(-90deg);
+		transform-origin: center;
 
 		@include desktop {
 			display: block;
 		}
 
 		&--mobile {
-			display: block;
 			position: absolute;
 			z-index: 50000;
-			transform-origin: center;
+			display: block;
 			transform: rotate(-90deg);
+			transform-origin: center;
 
 			@include desktop {
 				display: none;
