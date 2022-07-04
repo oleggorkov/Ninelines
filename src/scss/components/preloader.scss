@@ -1,0 +1,35 @@
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $color-back;
+	z-index: 10000;
+	transition: all 1s;
+	opacity: 1;
+	visibility: visible;
+
+	& .sprite-preloader {
+		position: absolute;
+		animation: 3s fly infinite linear;
+	}
+}
+
+.done {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@keyframes fly {
+	0% {
+		transform: translate(-100%, 100%);
+	}
+	50% {
+		transform: translate(85%, 20%);
+	}
+
+	100% {
+		transform: translate(280%, -70%);
+	}
+}

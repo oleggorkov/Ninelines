@@ -1,0 +1,16 @@
+// stylelint-disable no-empty-source
+// @include font-face("../fonts/FontName/FontName", "FontName", 400, normal);
+
+@font-face {
+	src: url("../fonts/SF-Display-400.woff2") format("woff2"), url("../fonts/SF-Display-400.woff") format("woff");
+	font-family: "SF-Display";
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	src: url("../fonts/SF-Display-700.woff2") format("woff2"), url("../fonts/SF-Display-700.woff") format("woff");
+	font-family: "SF-Display";
+	font-weight: 700;
+	font-style: normal;
+}

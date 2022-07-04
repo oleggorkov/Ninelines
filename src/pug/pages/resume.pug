@@ -1,0 +1,197 @@
+main.resume.container
+	+lazyPicture({
+		src: `${baseDir}images/line.png`,
+		alt: 'Линия',
+	}).resume__line
+	+lazyPicture({
+		src: `${baseDir}images/logo.png`,
+		alt: 'Лого',
+	}).resume__logo
+	.resume__row#resume
+		.resume__info
+			h1
+				| Горьков Олег,
+				br
+				| HTML-верстальщик
+			.resume__about
+				| Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным
+				| для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она
+				| появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее
+				| ценными цифровыми ресурсами будущего.
+
+		.resume__contacts
+			a.resume__link(href="mailto:ole.gorkov@yandex.ru")
+				| ole.gorkov@yandex.ru
+			a.resume__link(href="tel:+79051537793")
+				| +7 (905) 153-77-93
+			.resume__city
+				| г. Кострома
+
+			.resume__social
+				button(type="button" data-social="facebook").resume__share
+					+svg('facebook')
+				button(type="button" data-social="vk").resume__share
+					+svg('vk')
+				button(type="button" data-social="telegram").resume__share
+					+svg('telegram')
+
+
+
+	.resume__row#about
+		.resume__col
+			h2
+				| Опыт работы
+			+work({
+				dates: 'Июль 2019',
+				position: 'Freelance Designer',
+				about: 'Netherlands, Worldwide',
+				text: 'Available for a project or job in UX/UI, Visual and Product design.',
+				rhombFirst: 'fiolet',
+				rhombSecond: 'yellow',
+				rhombThird: 'blue'
+			},
+				'Commercial tryouts', 'Personal projects')
+
+			+work({
+				dates: 'Январь 2017 - Сентябрь 2018',
+				position: 'Digital Designer',
+				img: 'sprite-jcs',
+				name: 'J Creative Solutions',
+				about: 'Digital agency in Minsk, Belarus',
+				text: 'Created visuals for digital marketing channels such as social media, promo web and online ads. ' +
+					'Developed visual language from scratch or following the branding guidelines.' +
+					' Designed presentations for clients and indoor purposes.',
+				rhombFirst: 'blue',
+				rhombSecond: 'red'
+			},
+				'Agency projects')
+
+			+work({
+				dates: 'Март 2014 - Февраль 2017',
+				position: 'SEO Specialist → Lead SEO Specialist',
+				img: 'sprite-oz',
+				name: 'OZ.by',
+				about: 'Online bookstore in Minsk, Belarus',
+				text: 'Improved website performance and user experience of the biggest online bookstore OZ in Belarus,' +
+					' being a part of the marketing team, I interpreted Google Analytics data to IT, content and' +
+					' marketing colleagues. Advised on tech and content optimization strategy, automated processes,' +
+					' provided reports, increased organic traffic up to 150%.',
+				rhombFirst: 'orange',
+				rhombSecond: 'blue'
+			},
+				'Annual company report 2016')
+
+			+work({
+				dates: 'Август 2012 - Ноябрь 2013',
+				position: 'Content Specialist',
+				img: 'sprite-21',
+				name: '21vek.by',
+				about: 'E-commerce store in Minsk, Belarus',
+				text: 'Added and modified the product information, prepared images and text for the website,' +
+					' developed categories filters, ensure all info is correct in the catalogue with the goal' +
+					' of improving online shopper experience.',
+				rhombFirst: 'orange-dark'
+			})
+
+			+work({
+				dates: 'Август 2011 - Ноябрь 2014',
+				position: 'Software Support Engineer',
+				img: 'sprite-integral',
+				name: 'Integral',
+				about: 'Microelectronics factory in Minsk, Belarus',
+				text: 'Supported retail accounting system LS Trade, troubleshoot technical problems.',
+				rhombFirst: 'green'
+			})
+
+		.resume__col
+			+lazyPicture({
+				src: `${baseDir}images/user.png`,
+				alt: 'Юзер',
+			}).resume__user
+
+
+		.resume__col
+			h2
+				| Образование
+
+			.resume__education
+				+education({
+					bigRhomb: 'big',
+					way: 'Interface Design: Web & Mobile',
+					rhombFirst: 'fiolet-big',
+					rhombSecond: 'yellow-big',
+					rhombThird: 'blue-big'
+				},
+					'IT-Academy, 2020')
+
+				+education({
+					bigRhomb: 'big',
+					way: 'Fundamentals of Usability',
+					rhombFirst: 'yellow-big',
+				},
+					'Skillshare, Oct 2018')
+
+				+education({
+					bigRhomb: 'big',
+					way: 'CG Artist',
+					rhombFirst: 'rose-big'
+				},
+					'Polygon CG School, May-Sep 2017')
+
+				+education({
+					bigRhomb: 'big',
+					way: 'Graphic Design',
+					rhombFirst: 'blue-big'
+				},
+					'Belarusian State Academy of Arts, 2015 - 2017 Postgraduate Diploma')
+
+				+education({
+					bigRhomb: 'big',
+					way: 'SEO Specialist',
+					rhombFirst: 'orange-light-big'
+				},
+					'ARTOX Media, Jun-Aug 2012')
+
+				+education({
+					bigRhomb: 'big',
+					way: 'Information Technology Software',
+					rhombFirst: 'green-big'
+				},
+					'Belarusian State University of Informatics and Radioelectronics, 2011 - 2015 Bachelor’s degree',
+					'Polotsk State Economic College, 2007 - 2011 Associate’s degree')
+
+		+lazyPicture({
+			src: `${baseDir}images/downline.png`,
+			alt: 'Линия',
+		}).resume__downline
+
+	.resume-skills#skills
+		h2
+			| Навыки
+		.resume-skills__block
+			+skill({
+				title: 'Adobe Creative Suite',
+				text: 'Photoshop, Illustrator, InDesign, XD, After Effects'
+			})
+
+			+skill({
+				title: 'Prototyping',
+				text: 'Sketch, Figma, InVision, Marvel, Principle, Balsamiq'
+			})
+
+			+skill({
+				title: 'Additional',
+				text: 'HTML, CSS, Google Analytics, Keynote, Miro'
+			})
+
+			+skill({
+				title: 'Languages',
+				text: 'Conversational English and Native Russian'
+			})
+
+
+	.resume__row
+		+lazyPicture({
+			src: `${baseDir}images/heart.png`,
+			alt: 'Сердце',
+		}).resume__heart

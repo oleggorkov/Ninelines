@@ -1,0 +1,174 @@
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 2100;
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 30px;
+	background-color: transparent;
+
+	@include desktop {
+		padding-top: 100px;
+	}
+
+	&__logo {
+		display: block;
+		position: absolute;
+		left: 0;
+		transition: $duration-normal;
+	}
+
+	&__menu {
+		display: none;
+
+		@include desktop {
+			display: flex;
+			align-self: flex-end;
+		}
+
+		.header__list {
+			width: 100%;
+			display: flex;
+		}
+
+		.header__link {
+			position: relative;
+			display: flex;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+			color: $color-main;
+
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+
+			@include hover {
+				color: $color-blue;
+			}
+
+			@include active {
+				color: $color-blue;
+			}
+		}
+	}
+
+	&__menu--mobile {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 98;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		overflow: hidden;
+		overflow-y: auto;
+		margin: 0;
+		padding: 0 20px;
+		width: 100vw;
+		height: 100vh;
+		color: $color-main;
+		background-color: $color-back;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(100%);
+		transition: $duration-normal;
+		-webkit-overflow-scrolling: touch;
+
+		.header__list {
+			width: 100%;
+			text-align: center;
+			padding-top: 50px;
+		}
+
+		.header__link {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: left;
+			margin: 0 auto;
+			padding: 10px 0 10px 20px;
+			min-height: 51px;
+			font-weight: 700;
+			font-size: 26px;
+			line-height: 31px;
+			text-align: left;
+			color: $color-main;
+			background-color: $color-back;
+
+			&:not(:last-of-type) {
+				margin-bottom: 20px;
+			}
+
+			@include hover {
+				color: $color-blue;
+			}
+
+			@include active {
+				color: $color-blue;
+			}
+		}
+
+		@include active {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+		}
+
+		@include desktop {
+			display: none;
+		}
+
+	}
+
+	.sprite-clock {
+		display: block;
+		margin-top: -50px;
+
+		@include desktop {
+			display: none;
+		}
+	}
+
+	&__burger {
+		display: flex;
+		z-index: 100;
+		flex-direction: column;
+		width: 26px;
+		color: $color-main;
+
+		span {
+			display: block;
+			width: 26px;
+			height: 2.25px;
+			background-color: $color-main;
+			transition: $duration-normal;
+
+			&:nth-child(2) {
+				margin: 5.5px 0;
+			}
+		}
+
+		@include desktop {
+			display: none;
+		}
+
+		@include active {
+			span {
+				&:first-child {
+					transform: translate(0, 3px) rotate(-45deg);
+				}
+
+				&:nth-child(2) {
+					display: none;
+				}
+
+				&:last-child {
+					transform: translate(0, 0) rotate(45deg);
+				}
+			}
+		}
+	}
+}

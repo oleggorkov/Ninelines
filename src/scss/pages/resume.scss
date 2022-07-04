@@ -1,0 +1,278 @@
+.resume {
+	display: flex;
+	flex-direction: column;
+	margin-top: 130px;
+	position: relative;
+
+	@include desktop {
+		margin-top: 290px;
+	}
+
+	&__line {
+		position: absolute;
+		top: 10%;
+		left: -12px;
+		right: 0;
+
+		@include desktop {
+			top: 135px;
+			right: auto;
+		}
+	}
+
+	& .resume__logo {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		top: -120px;
+
+		@include desktop {
+			width: 150px;
+			height: 150px;
+			top: -190px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		position: relative;
+
+		@include desktop {
+			flex-direction: row;
+			margin-bottom: 200px;
+		}
+
+		&:last-of-type {
+			justify-content: center;
+			margin-bottom: 40px;
+
+			@include desktop {
+				margin-bottom: 50px;
+			}
+		}
+
+		& + #about {
+			margin-bottom: 40px;
+
+			@include desktop {
+				margin-bottom: 160px;
+			}
+		}
+
+		& .resume__downline {
+			position: absolute;
+			bottom: -100px;
+
+			@include desktop {
+				bottom: -330px;
+			}
+		}
+	}
+
+	h2 {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 26px;
+		color: $color-main;
+		margin-bottom: 20px;
+		margin-top: 0;
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 29px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&-skills {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 40px;
+
+		@include desktop {
+			margin-bottom: 200px;
+		}
+
+		&__block {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+
+			@include desktop {
+				flex-direction: row;
+			}
+		}
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		&:first-of-type {
+			width: 100%;
+
+			@include desktop {
+				width: 500px;
+			}
+
+			@media screen and (min-width: 1200px) {
+				width: 560px;
+			}
+		}
+
+		&:nth-of-type(3) {
+			max-width: 100%;
+
+			h2 {
+				margin-bottom: 26px;
+
+				@include desktop {
+					margin-bottom: 45px;
+				}
+			}
+
+			@include desktop {
+				align-items: center;
+				margin-right: 0;
+			}
+
+			@media screen and (min-width: 1200px){
+				max-width: 220px;
+				margin-right: 55px;
+			}
+		}
+
+		&:nth-of-type(2) {
+			height: 100%;
+			position: relative;
+			margin: 40px auto;
+
+			@include desktop {
+				margin: 0;
+			}
+
+			& .resume__user {
+				width: 200px;
+				height: 200px;
+
+				@include desktop {
+					width: 500px;
+					height: 500px;
+					position: sticky;
+					top: 125px;
+				}
+			}
+
+			@media screen and (min-width: 1025px) {
+				right: 70px;
+				position: absolute;
+			}
+
+			@media screen and (min-width: 1201px) {
+				right: 175px;
+			}
+		}
+	}
+
+	&__education {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include desktop {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	h1 {
+		font-weight: 700;
+		font-size: 28px;
+		color: $color-main;
+		margin-bottom: 20px;
+
+		@include desktop {
+			font-size: 36px;
+			line-height: 140%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 590px;
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-right: 132px;
+	}
+
+	&__about {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: $color-main;
+		margin-bottom: 20px;
+
+		@include desktop {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: $color-main;
+		margin-bottom: 10px;
+
+		@include hover {
+			color: $color-blue;
+		}
+
+		@include active {
+			color: $color-blue;
+		}
+
+	}
+
+	&__city {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: $color-main;
+		margin-bottom: 15px;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: space-between;
+
+		svg {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&__share {
+		padding: 0;
+		border: none;
+		cursor: pointer;
+
+		&:not(:last-of-type) {
+			margin-right: 20px;
+		}
+	}
+}

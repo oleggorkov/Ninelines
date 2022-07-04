@@ -1,0 +1,13 @@
+mixin education(data, ...items)
+	.education
+		+rhombs({
+			color1: data.rhombFirst,
+			color2: data.rhombSecond,
+			color3: data.rhombThird,
+			bigRhomb: data.bigRhomb
+		})
+		.education__way
+			| !{data.way}
+		.education-school
+			each item in items
+				.education-school__text= item

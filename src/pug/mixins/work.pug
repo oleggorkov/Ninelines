@@ -1,0 +1,27 @@
+mixin work(data, ...items)
+	.work
+		.work__dates
+			| !{data.dates}
+
+		.work-position
+			.work-position__name
+				| !{data.position}
+			+rhombs({
+				color1: data.rhombFirst,
+				color2: data.rhombSecond,
+				color3: data.rhombThird
+			})
+
+		.work-place
+			.work-place__img(class=data.img)
+			.work-place__block
+				.work-place__name
+					| !{data.name}
+				.work-place__about
+					| !{data.about}
+
+		.work__text !{data.text}
+
+		.work-projects
+			each item in items
+				a(href="/").work-projects__link= item
